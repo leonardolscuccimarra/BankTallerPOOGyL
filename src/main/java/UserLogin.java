@@ -24,7 +24,7 @@ public class UserLogin {
             System.out.println("Bienvenido "+ username);
         } else {
             System.out.println("Credenciales incorrectas, intente nuevamente"+ System.lineSeparator());
-            validateLogIn(username,password,inputs);
+            validateLogIn(username,password,scannerLogIn());
         }
     }
 }
