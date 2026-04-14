@@ -32,6 +32,17 @@ public class CUI {
         }
     }
 
+    private void printDataList(String[]data){
+        printDataList(data, 20);
+    }
+
+    private void printDataList(String[] data, int maxEntries){
+        for (int i = 0; i < maxEntries; i++){
+            System.out.println(data[i]);
+        }
+        System.out.println(System.lineSeparator());
+    }
+
     private int scanOptionList(String[] options){
         Scanner sc = new Scanner(System.in);
         printOptionList(options);
@@ -70,7 +81,6 @@ public class CUI {
         optionsMenu[2] = "Establecer Monto: ";
         optionsMenu[3] = "Volver";
 
-        printLogo();
         switch (scanOptionList(optionsMenu)) {
             case 0 -> clientMenu();
             case 1 -> transferMenu();
@@ -87,7 +97,7 @@ public class CUI {
         optionsMenu[3] = "Crear cuenta";
         optionsMenu[4] = "Volver";
 
-        printLogo();
+
         switch (scanOptionList(optionsMenu)) {
             case 0 -> clientMenu();
             case 1 -> transferMenu();
@@ -105,7 +115,6 @@ public class CUI {
         optionsMenu[2] = "Añadir Nuevo Cliente";
         optionsMenu[3] = "Balance de todas las cuentas";
 
-        printLogo();
         switch (scanOptionList(optionsMenu)) {
             case 0 -> clientMenu();
             case 1 -> transferMenu();

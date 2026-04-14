@@ -18,6 +18,8 @@ public class DataBase {
     }
     private void cargarSucursales(){
         List<Sucursal> sucursalList = new ArrayList<>();
+
+        sucursalList.add(cargarUnaSucursal());
     }
 
     private void cargarClientes(InterfaceClientela registro) {
