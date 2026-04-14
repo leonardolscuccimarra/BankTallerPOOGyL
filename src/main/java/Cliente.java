@@ -95,4 +95,12 @@ public class Cliente {
     public String getPermisos() {
         return permisos;
     }
+
+    public void sumarSaldo(BigDecimal monto){
+        saldo = saldo.add(monto);
+    }
+
+    public void restarSaldo(BigDecimal monto){
+        saldo = saldo.subtract(monto);
+    }
 }

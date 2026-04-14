@@ -19,6 +19,10 @@ public class DataBase {
         return sucursalList;
     }
 
+    public Sucursal getSucursalList(int index){
+        return sucursalList.get(index);
+    }
+
     public Sucursal getCentral(){
         return sucursalList.get(0);
     }
@@ -43,6 +47,9 @@ public class DataBase {
         new Cliente.Builder("islascaimansa", "islascaimansa","Islas Caiman", "S.A.", "Islas Caiman, Islas Caiman")
                 .tipoCuenta("Empresa")
                 .saldo(BigDecimal.valueOf(1000))
+                .build(registro);
+        new Cliente.Builder("admin", "admin", "Admin", "Admin", "Adminlandia")
+                .tipoCuenta("ADMIN")
                 .build(registro);
     }
 }
