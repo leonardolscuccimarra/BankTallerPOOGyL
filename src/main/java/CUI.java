@@ -52,6 +52,11 @@ public class CUI {
         System.out.println(System.lineSeparator());
     }
 
+    private String scanValidate(){
+        Scanner sc = new Scanner(System.in);
+        return sc.nextLine();
+    }
+
     private int scanOptionList(String[] options){
         Scanner sc = new Scanner(System.in);
         printOptionList(options);
@@ -85,11 +90,11 @@ public class CUI {
     }
 
     public void transferMenu() {
+        String[] optionsLabel = {"Seleccionar Emisor: ", "Seleccionar Destino: ", "Establecer Monto: ", "Volver"};
         String[] optionsMenu = new String[4];
-        optionsMenu[0] = "Seleccionar Emisor: ";
-        optionsMenu[1] = "Seleccionar Destino: ";
-        optionsMenu[2] = "Establecer Monto: ";
-        optionsMenu[3] = "Volver";
+        for (int i = 0; i < optionsLabel.length; i++) {
+            optionsMenu[i] = optionsLabel[i];
+        }
 
         switch (scanOptionList(optionsMenu)) {
             case 0 -> clientMenu();
@@ -100,44 +105,48 @@ public class CUI {
     }
 
     public void newClientMenu() {
-        String[] optionsMenu = new String[5];
-        optionsMenu[0] = "Nombre: ";
-        optionsMenu[1] = "Edad: ";
-        optionsMenu[2] = "Dirección: ";
-        optionsMenu[3] = "Crear cuenta";
-        optionsMenu[4] = "Volver";
+        String[] optionsLabel = {"Usuario: ", "Contraseña: ", "Nombre: ", "Edad: ", "Dirección: ", "Crear cuenta", "Volver"};
+        String[] optionsMenu = new String[7];
+        String[] optionsValues = new String[5];
+        for (int i = 0; i < optionsLabel.length; i++) {
+            optionsMenu[i] = optionsLabel[i];
+        }
 
+        int selection = scanOptionList(optionsMenu);
+        while (selection != 5 && selection != 6) {
+            optionsValues[selection] = scanValidate();
+            optionsMenu[selection] = optionsLabel[selection] + optionsValues[selection];
+            printOptionList(optionsMenu);
+            selection = scanOptionList(optionsMenu);
+        }
 
-        switch (scanOptionList(optionsMenu)) {
-            case 0 -> clientMenu();
-            case 1 -> transferMenu();
-            case 2 -> newClientMenu();
-            case 3 -> balMenu();
-            case 4 -> mainMenu();
+        if (selection == 5) {
+            //Cargar Cliente
+            newClientMenu();
+        } else {
+            mainMenu();
         }
     }
 
 
     public void balMenu() {
-        String[] optionsMenu = new String[1];
-        optionsMenu[0] = "Volver";
+        String[] optionsMenu = {"Volver"};
 
         printLogo();
         System.out.println("$" + dr.getBalTotal());
         System.out.println("Entre " + dr.getDataMapSize() + " Cuentas");
 
-        switch (scanOptionList(optionsMenu)) {
-            case 0 -> mainMenu();
-        }
+        scanOptionList(optionsMenu);
+        mainMenu();
+//      Se que comentar código está mal pero me ahorro el switch redundante
+//        switch (scanOptionList(optionsMenu)) {
+//            case 0 -> mainMenu();
+//        }
     }
 
 
     public void mainMenu(){
-        String[] optionsMenu = new String[4];
-        optionsMenu[0] = "Clientes";
-        optionsMenu[1] = "Transferencias";
-        optionsMenu[2] = "Añadir Nuevo Cliente";
-        optionsMenu[3] = "Balance Total";
+        String[] optionsMenu = {"Clientes", "Transferencias", "Añadir Nuevo Cliente", "Balance Total"};
 
         printLogo();
         switch(scanOptionList(optionsMenu)){
@@ -145,6 +154,6 @@ public class CUI {
             case 1 -> transferMenu();
             case 2 -> newClientMenu();
             case 3 -> balMenu();
-        };
+        }
     }
 }
