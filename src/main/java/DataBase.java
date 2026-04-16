@@ -134,7 +134,7 @@ public class DataBase {
                 .tipoCuenta("Empresa")
                 .saldo(BigDecimal.valueOf(1000))
                 .build(sucursal.registro);
-        new Cliente.Builder("admin", "valido", "Admin", "Admin", "Adminlandia")
+        new Cliente.Builder("admin", "central", "Admin", "Admin", "Adminlandia")
                 .tipoCuenta("ADMIN")
                 .permisos("ADMIN")
                 .build(sucursal.registro);
