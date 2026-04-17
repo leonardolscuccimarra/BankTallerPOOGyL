@@ -1,8 +1,8 @@
-package ServicioDataBase;
+package leo.ServicioDataBase;
 
-import ModeloBanco.Cliente.Cliente;
-import ModeloBanco.Sucursal;
-import ModeloBanco.Transferencia.Transferencia;
+import leo.ModeloBanco.Cliente.Cliente;
+import leo.ModeloBanco.Sucursal;
+import leo.ModeloBanco.Transferencia.Transferencia;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

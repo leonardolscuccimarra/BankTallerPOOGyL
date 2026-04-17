@@ -1,8 +1,7 @@
-package AppCUI;
+package leo.AppCUI;
 
-import ModeloBanco.Transferencia.InterfaceTransferencia;
-import ModeloBanco.Transferencia.Transferencia;
-import ModeloBanco.Cliente.Cliente;
+import leo.ModeloBanco.Transferencia.InterfaceTransferencia;
+import leo.ModeloBanco.Transferencia.Transferencia;
 
 import java.util.ArrayList;
 

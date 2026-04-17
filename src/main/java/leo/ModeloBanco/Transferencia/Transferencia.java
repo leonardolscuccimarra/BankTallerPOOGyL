@@ -1,6 +1,6 @@
-package ModeloBanco.Transferencia;
+package leo.ModeloBanco.Transferencia;
 
-import ModeloBanco.Cliente.Cliente;
+import leo.ModeloBanco.Cliente.Cliente;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

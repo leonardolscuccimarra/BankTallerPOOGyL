@@ -1,9 +1,7 @@
-package ModeloBanco.Cliente;
+package leo.ModeloBanco.Cliente;
 
 import java.math.BigDecimal;
-import java.util.Map;
 import java.util.HashMap;
-import java.math.BigDecimal;
 
 
 public class RegistroClientela implements InterfaceClientela {

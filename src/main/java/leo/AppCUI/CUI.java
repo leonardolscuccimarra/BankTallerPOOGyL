@@ -1,7 +1,7 @@
-package AppCUI;
+package leo.AppCUI;
 
-import ModeloBanco.Cliente.Cliente;
-import ModeloBanco.Sucursal;
+import leo.ModeloBanco.Cliente.Cliente;
+import leo.ModeloBanco.Sucursal;
 
 import java.util.ArrayList;
 import java.util.Scanner;

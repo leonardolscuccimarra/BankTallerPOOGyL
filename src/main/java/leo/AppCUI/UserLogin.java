@@ -1,8 +1,8 @@
-package AppCUI;
+package leo.AppCUI;
 
-import ModeloBanco.Cliente.Cliente;
-import ModeloBanco.Sucursal;
-import ServicioDataBase.DataBaseInjector;
+import leo.ModeloBanco.Cliente.Cliente;
+import leo.ModeloBanco.Sucursal;
+import leo.ServicioDataBase.DataBaseInjector;
 
 import java.util.Scanner;
 

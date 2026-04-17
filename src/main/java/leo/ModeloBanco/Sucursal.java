@@ -1,9 +1,9 @@
-package ModeloBanco;
+package leo.ModeloBanco;
 
-import ModeloBanco.Cliente.InterfaceClientela;
-import ModeloBanco.Cliente.RegistroClientela;
-import ModeloBanco.Transferencia.InterfaceTransferencia;
-import ModeloBanco.Transferencia.RegistroTransferencia;
+import leo.ModeloBanco.Cliente.InterfaceClientela;
+import leo.ModeloBanco.Cliente.RegistroClientela;
+import leo.ModeloBanco.Transferencia.InterfaceTransferencia;
+import leo.ModeloBanco.Transferencia.RegistroTransferencia;
 
 public class Sucursal {
     private String nombre;

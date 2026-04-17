@@ -1,6 +1,8 @@
-import AppCUI.CUI;
-import AppCUI.UserLogin;
-import ServicioDataBase.DataBaseInjector;
+package leo;
+
+import leo.AppCUI.CUI;
+import leo.AppCUI.UserLogin;
+import leo.ServicioDataBase.DataBaseInjector;
 
 public class Main {
     public static void main(String[] args) {

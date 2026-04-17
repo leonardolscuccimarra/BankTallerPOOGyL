@@ -1,7 +1,7 @@
-package AppCUI;
+package leo.AppCUI;
 
-import ModeloBanco.Cliente.Cliente;
-import ModeloBanco.Cliente.InterfaceClientela;
+import leo.ModeloBanco.Cliente.Cliente;
+import leo.ModeloBanco.Cliente.InterfaceClientela;
 
 import java.util.ArrayList;
 
